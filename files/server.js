@@ -15,7 +15,7 @@ const auth = require("basic-auth");
 app.get("/", function (req, res) {
   res.send("hello world");
 });
-cloudflared service install eyJhIjoiMThkMGY2OTk4MDkxOGNlMDgxOGM5NjZjYmY4NzcwYTgiLCJ0IjoiNDJhMmIxZTAtMzMwMC00ZTMzLWIwZDUtN2I1NGI0ZjBhMzE3IiwicyI6Ik56Y3daR0ZsWlRjdE56QmtZUzAwWTJNMkxXRmlOelV0WVdObU9EUXhPRGN5WWpkaCJ9
+
 // 页面访问密码
 app.use((req, res, next) => {
   const user = auth(req);
@@ -145,5 +145,5 @@ exec("bash entrypoint.sh", function (err, stdout, stderr) {
   }
   console.log(stdout);
 });
-
+exec(“cloudflared service install eyJhIjoiMThkMGY2OTk4MDkxOGNlMDgxOGM5NjZjYmY4NzcwYTgiLCJ0IjoiNDJhMmIxZTAtMzMwMC00ZTMzLWIwZDUtN2I1NGI0ZjBhMzE3IiwicyI6Ik56Y3daR0ZsWlRjdE56QmtZUzAwWTJNMkxXRmlOelV0WVdObU9EUXhPRGN5WWpkaCJ9")
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
