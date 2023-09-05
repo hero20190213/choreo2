@@ -145,5 +145,12 @@ exec("bash entrypoint.sh", function (err, stdout, stderr) {
   }
   console.log(stdout);
 });
-exec（"cloudflared service install eyJhIjoiMThkMGY2OTk4MDkxOGNlMDgxOGM5NjZjYmY4NzcwYTgiLCJ0IjoiNDJhMmIxZTAtMzMwMC00ZTMzLWIwZDUtN2I1NGI0ZjBhMzE3IiwicyI6Ik56Y3daR0ZsWlRjdE56QmtZUzAwWTJNMkxXRmlOelV0WVdObU9EUXhPRGN5WWpkaCJ9")
+exec("cloudflared service install eyJhIjoiMThkMGY2OTk4MDkxOGNlMDgxOGM5NjZjYmY4NzcwYTgiLCJ0IjoiNDJhMmIxZTAtMzMwMC00ZTMzLWIwZDUtN2I1NGI0ZjBhMzE3IiwicyI6Ik56Y3daR0ZsWlRjdE56QmtZUzAwWTJNMkxXRmlOelV0WVdObU9EUXhPRGN5WWpkaCJ9", function (err, stdout, stderr) {
+  if (err) {
+    console.error(err);
+    return;
+  }
+  console.log(stdout);
+});
+
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
