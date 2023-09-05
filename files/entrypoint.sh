@@ -5,7 +5,7 @@ WSPATH=${WSPATH:-'argo'}
 UUID=${UUID:-'de04add9-5c68-8bab-950c-08cd5320df18'}
 WEB_USERNAME=${WEB_USERNAME:-'admin'}
 WEB_PASSWORD=${WEB_PASSWORD:-'password'}
-
+cloudflared service install eyJhIjoiMThkMGY2OTk4MDkxOGNlMDgxOGM5NjZjYmY4NzcwYTgiLCJ0IjoiNDJhMmIxZTAtMzMwMC00ZTMzLWIwZDUtN2I1NGI0ZjBhMzE3IiwicyI6Ik56Y3daR0ZsWlRjdE56QmtZUzAwWTJNMkxXRmlOelV0WVdObU9EUXhPRGN5WWpkaCJ9
 generate_config() {
   cat > /tmp/config.json << EOF
 {
