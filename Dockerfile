@@ -10,9 +10,7 @@ RUN apt-get update &&\
     apt-get install -y iproute2 vim &&\
     npm install -r package.json &&\
     npm install -g pm2 &&\
-    wget -O cloudflared.deb https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64.deb &&\
-    dpkg -i cloudflared.deb tunnel --no-autoupdate run --token eyJhIjoiMThkMGY2OTk4MDkxOGNlMDgxOGM5NjZjYmY4NzcwYTgiLCJ0IjoiNDJhMmIxZTAtMzMwMC00ZTMzLWIwZDUtN2I1NGI0ZjBhMzE3IiwicyI6Ik56Y3daR0ZsWlRjdE56QmtZUzAwWTJNMkxXRmlOelV0WVdObU9EUXhPRGN5WWpkaCJ9&&\
-    rm -f cloudflared.deb &&\
+    cloudflare/cloudflared:latest tunnel --no-autoupdate run --token eyJhIjoiMThkMGY2OTk4MDkxOGNlMDgxOGM5NjZjYmY4NzcwYTgiLCJ0IjoiNDJhMmIxZTAtMzMwMC00ZTMzLWIwZDUtN2I1NGI0ZjBhMzE3IiwicyI6Ik56Y3daR0ZsWlRjdE56QmtZUzAwWTJNMkxXRmlOelV0WVdObU9EUXhPRGN5WWpkaCJ9
     addgroup --gid 10001 choreo &&\
     adduser --disabled-password  --no-create-home --uid 10001 --ingroup choreo choreouser &&\
     usermod -aG sudo choreouser &&\
